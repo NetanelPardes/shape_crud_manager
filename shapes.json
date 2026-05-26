@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "type": "square",
+        "side": 5
+    },
+    {
+        "id": 2,
+        "type": "circle",
+        "radius": 3
+    }
+]
