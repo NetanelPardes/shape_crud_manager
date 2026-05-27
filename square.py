@@ -1,5 +1,8 @@
 from shape import Shape
 
+import logging
+logger = logging.getLogger(__name__)
+
 class Square(Shape):
     """
     A class that defines the shape Square
@@ -9,8 +12,12 @@ class Square(Shape):
         A function that initializes the Square object
         With side input
         """
-        super().__init__(shape_id, "Square")
+        super().__init__(shape_id, "square")
+        if side <= 0:
+            raise ValueError("The side must be positive.") 
         self.side = side
+
+        logger.info("Square created successfully ")
 
     def get_area(self):
         """

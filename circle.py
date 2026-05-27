@@ -1,5 +1,8 @@
 from shape import Shape
 
+import logging
+logger = logging.getLogger(__name__)
+
 class Circle(Shape):
     """
     class that defines the shape Circle
@@ -10,9 +13,13 @@ class Circle(Shape):
         """
         A function that initializes the Circle object
         With radius input
-        """
-        super().__init__(shape_id,"Circle")
+        """        
+        super().__init__(shape_id, "circle")
+        if radius <= 0:
+            raise ValueError("The radius should be positive.")
         self.radius = radius
+
+        logger.info("Circle created successfully ")
 
     def get_area(self):
         """

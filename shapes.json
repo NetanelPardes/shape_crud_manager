@@ -1,12 +1,33 @@
 [
     {
-        "id": 1,
-        "type": "square",
+        "shape_id": 1,
+        "shape_type": "square",
         "side": 5
     },
     {
-        "id": 2,
-        "type": "circle",
-        "radius": 3
+        "shape_id": 2,
+        "shape_type": "square",
+        "side": 3
+    },
+    {
+        "shape_id": 3,
+        "shape_type": "rectangle",
+        "length": 5.0,
+        "width": 6.0
+    },
+    {
+        "shape_id": 4,
+        "shape_type": "circle",
+        "radius": 5
+    },
+    {
+        "shape_id": 5,
+        "shape_type": "circle",
+        "radius": 4.5
+    },
+    {
+        "shape_id": 6,
+        "shape_type": "square",
+        "side": 4.0
     }
 ]

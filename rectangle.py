@@ -1,5 +1,8 @@
 from shape import Shape
 
+import logging
+logger = logging.getLogger(__name__)
+
 class Rectangle(Shape):
     """
     A class that defines the shape Rectangle
@@ -9,21 +12,28 @@ class Rectangle(Shape):
         A function that initializes the Rectangle object
         With input of height and width
         """
-        super().__init__(shape_id,"Rectangle")
+        super().__init__(shape_id, "rectangle")
+        
+        if length <= 0 or width <=0:
+            raise ValueError("The length and width must be positive.")
         self.length = length
         self.width = width
+
+        logger.info("Rectangle created successfully ")
     
     def get_area(self):
         """
         A function that takes a side and returns the area of ​​the rectangle
         """
         return self.length * self.width
+
     
     def get_perimeter(self):
         """
         A function that takes a side and returns the perimeter of the rectangle
         """
         return (self.length + self.width)*2
+
     
     def to_dict(self):
         """
