@@ -29,5 +29,15 @@
         "shape_id": 6,
         "shape_type": "square",
         "side": 4.0
+    },
+    {
+        "shape_id": 100,
+        "shape_type": "square",
+        "side": 8
+    },
+    {
+        "shape_id": 102,
+        "shape_type": "circle",
+        "radius": 3
     }
 ]

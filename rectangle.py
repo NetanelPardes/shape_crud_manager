@@ -16,6 +16,7 @@ class Rectangle(Shape):
         
         if length <= 0 or width <=0:
             raise ValueError("The length and width must be positive.")
+        
         self.length = length
         self.width = width
 
@@ -45,10 +46,20 @@ class Rectangle(Shape):
         return data
     
 if __name__ == "__main__":
-    """
-    Tests that check whether the shape class works
-    """
-    r = Rectangle(3,3,4)
+    print("=== Rectangle tests ===")
+
+    r = Rectangle(1, 4, 6)
+
     print(r.to_dict())
-    print(r.get_area())
-    print(r.get_perimeter())
+    print("Area:", r.get_area())
+    print("Perimeter:", r.get_perimeter())
+
+    try:
+        bad_rectangle = Rectangle(2, -4, 6)
+    except ValueError as e:
+        print("Error:", e)
+
+    try:
+        zero_rectangle = Rectangle(3, 4, 0)
+    except ValueError as e:
+        print("Error:", e)

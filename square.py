@@ -40,10 +40,20 @@ class Square(Shape):
         return data
 
 if __name__ == "__main__":
-    """
-    Tests that check whether the shape class works
-    """
-    s = Square(4,8)
+    print("=== Square tests ===")
+
+    s = Square(1, 5)
+
     print(s.to_dict())
-    print(s.get_area())
-    print(s.get_perimeter())
+    print("Area:", s.get_area())
+    print("Perimeter:", s.get_perimeter())
+
+    try:
+        bad_square = Square(2, -3)
+    except ValueError as e:
+        print("Error:", e)
+
+    try:
+        zero_square = Square(3, 0)
+    except ValueError as e:
+        print("Error:", e)

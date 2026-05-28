@@ -50,6 +50,7 @@ def show_all_shapes(manager):
     for shape in my_shapes:
         print(shape.to_dict())
 
+
 def update_shape(manager):
     """
     A function that receives the shape number
@@ -82,6 +83,7 @@ def update_shape(manager):
         print(f"You need to enter a number.")
         logger.warning("The user entered something other than a number.")
 
+
 def delete_shape(manager):
     """
     A function that receives the shape number and sends it to the delete_shape function of the ShapeManager class 
@@ -99,6 +101,7 @@ def delete_shape(manager):
     except TypeError as e:
         print(f"You need to enter a number.")
         logger.warning("The user entered something other than a number.")
+
 
 def menu():
     """

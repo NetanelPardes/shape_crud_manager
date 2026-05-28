@@ -42,10 +42,20 @@ class Circle(Shape):
         return data 
     
 if __name__ == "__main__":
-    """
-    Tests that check whether the shape class works
-    """
-    c = Circle(5,12)
+    print("=== Circle tests ===")
+
+    c = Circle(1, 3)
+
     print(c.to_dict())
-    print(c.get_area())
-    print(c.get_perimeter())
+    print("Area:", c.get_area())
+    print("Perimeter:", c.get_perimeter())
+
+    try:
+        bad_circle = Circle(2, -5)
+    except ValueError as e:
+        print("Error:", e)
+
+    try:
+        zero_circle = Circle(3, 0)
+    except ValueError as e:
+        print("Error:", e)

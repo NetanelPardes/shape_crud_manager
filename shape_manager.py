@@ -120,6 +120,7 @@ class ShapeManager:
                 return shape.shape_type
         return None
 
+
     def get_id(self):
         """
         A function that returns the highest shape number in the file, plus one
@@ -129,6 +130,7 @@ class ShapeManager:
             return 1
         return max(shape.shape_id for shape in self.shapes) + 1
         
+
     def load_from_json(self):
         """
         A function loads the contents of a json file,
@@ -153,3 +155,53 @@ class ShapeManager:
             print("There was a problem opening the file.")
             logger.warning("There was a problem opening the file.")
 
+if __name__ == "__main__":
+    print("=== ShapeManager tests ===")
+
+    manager = ShapeManager()
+
+    manager.create_shape({
+        "shape_id": 100,
+        "shape_type": "square",
+        "side": 5
+    })
+
+    manager.create_shape({
+        "shape_id": 101,
+        "shape_type": "rectangle",
+        "length": 4,
+        "width": 6
+    })
+
+    manager.create_shape({
+        "shape_id": 102,
+        "shape_type": "circle",
+        "radius": 3
+    })
+
+    print("All shapes:")
+    for shape in manager.get_all_shapes():
+        print(shape.to_dict())
+
+    print("Find shape 100:")
+    print(manager.find_shape_by_id(100))
+
+    print("Update shape 100:")
+    manager.update_shape(100, {"side": 8})
+
+    print("Delete shape 101:")
+    manager.delete_shape(101)
+
+    print("All shapes after update and delete:")
+    for shape in manager.get_all_shapes():
+        print(shape.to_dict())
+
+    try:
+        manager.update_shape(999, {"side": 5})
+    except KeyError as e:
+        print("Error:", e)
+
+    try:
+        manager.delete_shape(999)
+    except KeyError as e:
+        print("Error:", e)
