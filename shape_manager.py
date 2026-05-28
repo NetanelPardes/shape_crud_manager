@@ -19,33 +19,46 @@ class ShapeManager:
 
         logger.info("Shape Manager created successfully")
 
+    
     def create_shape(self, shape_dict):
         """
-
+        A function that receives a dictionary of data and creates a form from it according to its class
+        It is used both to create a new form and to load the information from a file
         """
-        if shape_dict["shape_type"] == "square":
-            my_shape = Square(shape_dict["shape_id"],shape_dict["side"])
-            #print(my_square.to_dict())
+        try:
+            if shape_dict["shape_type"] == "square":
+                my_shape = Square(shape_dict["shape_id"],shape_dict["side"])
+            
+            elif shape_dict["shape_type"] == "rectangle":
+                my_shape = Rectangle(shape_dict["shape_id"], shape_dict["length"] , shape_dict["width"])
+            
+            elif shape_dict["shape_type"] == "circle":
+                my_shape = Circle(shape_dict["shape_id"],shape_dict["radius"])
+            
+            self.shapes.append(my_shape)
+            self.save_to_json()
         
-        elif shape_dict["shape_type"] == "rectangle":
-            my_shape = Rectangle(shape_dict["shape_id"], shape_dict["length"] , shape_dict["width"])
+        except KeyError as e:
+            print("Missing required field")
         
-        elif shape_dict["shape_type"] == "circle":
-            my_shape = Circle(shape_dict["shape_id"],shape_dict["radius"])
-        
-        self.shapes.append(my_shape)
-        self.save_to_json()
-
+    
     def get_all_shapes(self):
         """
-    
+        A function that returns a list of all shapes
+        Used to print the shapes
         """
         return self.shapes
 
+    
     def update_shape(self, shape_id, new_data):
         """
-    
+        A function that updates one of the shapes
+        It gets the shape's data from the sort
+        It updates the shape in the shape list and loads the list back into the file
         """
+        for val in new_data.values():
+            if val <= 0:
+                raise ValueError("You cannot enter negative numbers.")
         for shape in self.shapes:
             if shape.shape_id == shape_id:
                 if shape.shape_type == 'square':
@@ -59,31 +72,48 @@ class ShapeManager:
                     shape.radius = new_data['radius']
                 
                 self.save_to_json()
-                break
+                print("The shape was updated successfully.")
+                logger.info("The shape %s (%s) was updated successfully With the data %s." , shape_id,shape.shape_type ,new_data)
+                return
+        raise KeyError("The key does not exist in the system.")
         
-
-                   
+        
     def delete_shape(self, shape_id):
         """
-    
+        A function that takes the shape that needs to be deleted
+        removes it from the list of shapes
+        and loads the list back into the file        
         """
         for shape in self.shapes:
             if shape.shape_id == shape_id:
                 self.shapes.remove(shape)
                 self.save_to_json()
-                break
-            
+                print("The shape was Deleted successfully.")
+                logger.info("The shape %s (%s) was Deleted successfully." , shape_id,shape.shape_type)
+                return
 
+        raise KeyError("The key does not exist in the system.")        
+
+    
     def save_to_json(self):
         """
-    
+        A function loads the list of shapes into a json file
         """
-        with open("shapes.json", "w", encoding="utf-8") as file:
-            json.dump([shape.to_dict() for shape in self.shapes], file, indent=4)
+        try:
+            with open("shapes.json", "w", encoding="utf-8") as file:
+                logger.info("The %s file is opened for writing information." , file.name)
+                json.dump([shape.to_dict() for shape in self.shapes], file, indent=4)
+                logger.info("The list %s was saved to a file." , self.shapes)
+        
+        except OSError as e:
+            print(f"Could not write to JSON file: {e}")
+            logger.warning("You do not have permission to access the file %s.", file.name)
+    
     
     def find_shape_by_id(self, shape_id):
         """
-        
+        A function that receives the shape number and returns its type according to what is in the list
+        If the number is not in the list it will return None
         """
         for shape in self.shapes:
             if shape.shape_id == shape_id:
@@ -92,7 +122,8 @@ class ShapeManager:
 
     def get_id(self):
         """
-        
+        A function that returns the highest shape number in the file, plus one
+        Use it to get a new id to create a shape
         """
         if not self.shapes:
             return 1
@@ -100,17 +131,25 @@ class ShapeManager:
         
     def load_from_json(self):
         """
-    
+        A function loads the contents of a json file,
+        and automatically loads the contents into a list of shapes using the create_shape function
+        The function will return an error if the file does not exist or the file was not opened properly
         """
         try:
             with open("shapes.json", "r", encoding="utf-8") as file:
-                logger.info("Loading shapes from %s" ,file.name)
-                shapes_data = json.load(file)
 
+                logger.info("The file %s is opened to read information." , file.name)
+                shapes_data = json.load(file)
+                
                 for shape in shapes_data:
                     self.create_shape(shape)
-
+                logger.info("The list %s was loaded from the file" , self.shapes)
+        
         except FileNotFoundError as e:
+            print("the json file not exist")
             logger.warning("the json file not exist")
             return []
+        except json.JSONDecodeError as e:
+            print("There was a problem opening the file.")
+            logger.warning("There was a problem opening the file.")
 

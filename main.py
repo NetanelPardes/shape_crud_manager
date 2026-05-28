@@ -5,6 +5,10 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(
 logger = logging.getLogger(__name__)
 
 def add_shape(manager):
+    """
+    A function that prints to the user what shape they want to add
+    and invokes the create_shape function of the ShapeManager class with the correct variable.
+    """
     print("\n===new shape===")
     print("1. Square")
     print("2. Rectangle")
@@ -33,11 +37,14 @@ def add_shape(manager):
     except ValueError as e:
         print(f"{e} : Negative numbers are not allowed.")
         logger.info("The user typed negative numbers into a shape.")
+    except TypeError as e:
+        print(f"You need to enter a number.")
+        logger.warning("The user entered something other than a number.")
 
 
 def show_all_shapes(manager):
     """
-    
+    A function receives the entire list of shapes and prints each one.
     """
     my_shapes = manager.get_all_shapes()
     for shape in my_shapes:
@@ -45,30 +52,58 @@ def show_all_shapes(manager):
 
 def update_shape(manager):
     """
-    
+    A function that receives the shape number
+    checks its type and sends it to the update_shape function of the ShapeManager class.
     """
-    choice_id = int(input("Enter the shape ID you want to update: "))
-    my_shape = manager.find_shape_by_id(choice_id)
+    try:
+        choice_id = int(input("Enter the shape ID you want to update: "))
+        my_shape = manager.find_shape_by_id(choice_id)
 
-    if my_shape == "square":
-        choice_change = {"side":float(input("Enter the new side: "))}
+        if my_shape == "square":
+            choice_change = {"side":float(input("Enter the new side: "))}
 
-    if my_shape == "rectangle":
-        choice_change = {"length" : float(input("Enter the new length: ")),"width" : float(input("Enter the new width: "))}
+        elif my_shape == "rectangle":
+            choice_change = {"length" : float(input("Enter the new length: ")),"width" : float(input("Enter the new width: "))}
 
-    if my_shape == "circle":
-        choice_change = {"radius" : float(input("Enter the new radius: "))}
-    
-    manager.update_shape(choice_id , choice_change)
+        elif my_shape == "circle":
+            choice_change = {"radius" : float(input("Enter the new radius: "))}
+
+        else:
+            print("Shape ID not found.")
+            return
+        
+        manager.update_shape(choice_id , choice_change)
+    except KeyError as e:
+        print("Shape ID not found.")
+    except ValueError as e:
+        print(f"{e} : Negative numbers are not allowed.")
+        logger.info("The user typed negative numbers into a shape.")
+    except TypeError as e:
+        print(f"You need to enter a number.")
+        logger.warning("The user entered something other than a number.")
 
 def delete_shape(manager):
     """
-    
+    A function that receives the shape number and sends it to the delete_shape function of the ShapeManager class 
+    which deletes the object from the file.
     """
-    choice_id = int(input("Enter the shape ID you want to delete: "))
-    manager.delete_shape(choice_id)
+    try:    
+        choice_id = int(input("Enter the shape ID you want to delete: "))
+        manager.delete_shape(choice_id)
+
+    except KeyError as e:
+        print("Shape ID not found.")
+    except ValueError as e:
+        print(f"{e} : Negative numbers are not allowed.")
+        logger.info("The user typed negative numbers into a shape.")
+    except TypeError as e:
+        print(f"You need to enter a number.")
+        logger.warning("The user entered something other than a number.")
 
 def menu():
+    """
+    Function that prints the system menu
+    """
     print("\n=== Shape CRUD Manager ===")
     print("1. Add shape")
     print("2. Show all shapes")
@@ -78,6 +113,9 @@ def menu():
 
 
 def main():
+    """
+    Main function
+    """
     logging.info("The program started working.")
     
     manager = ShapeManager()

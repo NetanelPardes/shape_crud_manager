@@ -2,12 +2,12 @@
     {
         "shape_id": 1,
         "shape_type": "square",
-        "side": 5
+        "side": 9.0
     },
     {
         "shape_id": 2,
         "shape_type": "square",
-        "side": 3
+        "side": 2.0
     },
     {
         "shape_id": 3,
@@ -18,7 +18,7 @@
     {
         "shape_id": 4,
         "shape_type": "circle",
-        "radius": 5
+        "radius": 6.0
     },
     {
         "shape_id": 5,
