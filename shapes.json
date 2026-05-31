@@ -39,5 +39,35 @@
         "shape_id": 102,
         "shape_type": "circle",
         "radius": 3
+    },
+    {
+        "shape_id": 100,
+        "shape_type": "square",
+        "side": 5
+    },
+    {
+        "shape_id": 102,
+        "shape_type": "circle",
+        "radius": 3
+    },
+    {
+        "shape_id": 100,
+        "shape_type": "square",
+        "side": 5
+    },
+    {
+        "shape_id": 102,
+        "shape_type": "circle",
+        "radius": 3
+    },
+    {
+        "shape_id": 100,
+        "shape_type": "square",
+        "side": 5
+    },
+    {
+        "shape_id": 102,
+        "shape_type": "circle",
+        "radius": 3
     }
 ]

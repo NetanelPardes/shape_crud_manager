@@ -35,10 +35,10 @@ def add_shape(manager):
             print("Wrong choice!")
 
     except ValueError as e:
-        print(f"{e} : Negative numbers are not allowed.")
+        print(f"{e}: Negative numbers are not allowed.")
         logger.info("The user typed negative numbers into a shape.")
     except TypeError as e:
-        print(f"You need to enter a number.")
+        print(f"{e}: You need to enter a number.")
         logger.warning("The user entered something other than a number.")
 
 
@@ -75,12 +75,12 @@ def update_shape(manager):
         
         manager.update_shape(choice_id , choice_change)
     except KeyError as e:
-        print("Shape ID not found.")
+        print(f"{e}: Shape ID not found.")
     except ValueError as e:
         print(f"{e} : Negative numbers are not allowed.")
         logger.info("The user typed negative numbers into a shape.")
     except TypeError as e:
-        print(f"You need to enter a number.")
+        print(f"{e}: You need to enter a number.")
         logger.warning("The user entered something other than a number.")
 
 
@@ -94,12 +94,12 @@ def delete_shape(manager):
         manager.delete_shape(choice_id)
 
     except KeyError as e:
-        print("Shape ID not found.")
+        print(f"{e}: Shape ID not found.")
     except ValueError as e:
-        print(f"{e} : Negative numbers are not allowed.")
+        print(f"{e}: Negative numbers are not allowed.")
         logger.info("The user typed negative numbers into a shape.")
     except TypeError as e:
-        print(f"You need to enter a number.")
+        print(f"{e}: You need to enter a number.")
         logger.warning("The user entered something other than a number.")
 
 

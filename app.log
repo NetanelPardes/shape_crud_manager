@@ -14,3 +14,87 @@
 2026-05-28 11:35:19,938 | INFO | shape_manager | The list [<square.Square object at 0x00000204B5D96CF0>, <square.Square object at 0x00000204B5D0B890>, <rectangle.Rectangle object at 0x00000204B5D96E40>, <circle.Circle object at 0x00000204B5D96F90>, <circle.Circle object at 0x00000204B5D0BB10>, <square.Square object at 0x00000204B5D0BD90>] was saved to a file.
 2026-05-28 11:35:19,938 | INFO | shape_manager | The list [<square.Square object at 0x00000204B5D96CF0>, <square.Square object at 0x00000204B5D0B890>, <rectangle.Rectangle object at 0x00000204B5D96E40>, <circle.Circle object at 0x00000204B5D96F90>, <circle.Circle object at 0x00000204B5D0BB10>, <square.Square object at 0x00000204B5D0BD90>] was loaded from the file
 2026-05-28 11:35:19,938 | INFO | shape_manager | Shape Manager created successfully
+2026-05-28 11:58:52,529 | INFO | root | The program started working.
+2026-05-28 11:58:52,530 | INFO | shape_manager | The file shapes.json is opened to read information.
+2026-05-28 11:58:52,530 | INFO | square | Square created successfully 
+2026-05-28 11:58:52,530 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,530 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>] was saved to a file.
+2026-05-28 11:58:52,531 | INFO | square | Square created successfully 
+2026-05-28 11:58:52,531 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,531 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>] was saved to a file.
+2026-05-28 11:58:52,531 | INFO | rectangle | Rectangle created successfully 
+2026-05-28 11:58:52,532 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,532 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>, <rectangle.Rectangle object at 0x00000205830D6E40>] was saved to a file.
+2026-05-28 11:58:52,532 | INFO | circle | Circle created successfully 
+2026-05-28 11:58:52,532 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,533 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>, <rectangle.Rectangle object at 0x00000205830D6E40>, <circle.Circle object at 0x00000205830D6F90>] was saved to a file.
+2026-05-28 11:58:52,533 | INFO | circle | Circle created successfully 
+2026-05-28 11:58:52,533 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,533 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>, <rectangle.Rectangle object at 0x00000205830D6E40>, <circle.Circle object at 0x00000205830D6F90>, <circle.Circle object at 0x000002058304BB10>] was saved to a file.
+2026-05-28 11:58:52,533 | INFO | square | Square created successfully 
+2026-05-28 11:58:52,534 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,534 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>, <rectangle.Rectangle object at 0x00000205830D6E40>, <circle.Circle object at 0x00000205830D6F90>, <circle.Circle object at 0x000002058304BB10>, <square.Square object at 0x000002058304BD90>] was saved to a file.
+2026-05-28 11:58:52,534 | INFO | square | Square created successfully 
+2026-05-28 11:58:52,535 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,535 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>, <rectangle.Rectangle object at 0x00000205830D6E40>, <circle.Circle object at 0x00000205830D6F90>, <circle.Circle object at 0x000002058304BB10>, <square.Square object at 0x000002058304BD90>, <square.Square object at 0x00000205830EE520>] was saved to a file.
+2026-05-28 11:58:52,536 | INFO | circle | Circle created successfully 
+2026-05-28 11:58:52,536 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 11:58:52,536 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>, <rectangle.Rectangle object at 0x00000205830D6E40>, <circle.Circle object at 0x00000205830D6F90>, <circle.Circle object at 0x000002058304BB10>, <square.Square object at 0x000002058304BD90>, <square.Square object at 0x00000205830EE520>, <circle.Circle object at 0x000002058304B9D0>] was saved to a file.
+2026-05-28 11:58:52,536 | INFO | shape_manager | The list [<square.Square object at 0x00000205830D6CF0>, <square.Square object at 0x000002058304B890>, <rectangle.Rectangle object at 0x00000205830D6E40>, <circle.Circle object at 0x00000205830D6F90>, <circle.Circle object at 0x000002058304BB10>, <square.Square object at 0x000002058304BD90>, <square.Square object at 0x00000205830EE520>, <circle.Circle object at 0x000002058304B9D0>] was loaded from the file
+2026-05-28 11:58:52,536 | INFO | shape_manager | Shape Manager created successfully
+2026-05-28 12:02:39,211 | INFO | root | The program started working.
+2026-05-28 12:02:39,211 | INFO | shape_manager | The file shapes.json is opened to read information.
+2026-05-28 12:02:39,211 | INFO | square | Square created successfully 
+2026-05-28 12:02:39,211 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,211 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>] was saved to a file.
+2026-05-28 12:02:39,212 | INFO | square | Square created successfully 
+2026-05-28 12:02:39,212 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,212 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>] was saved to a file.
+2026-05-28 12:02:39,212 | INFO | rectangle | Rectangle created successfully 
+2026-05-28 12:02:39,212 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,213 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>, <rectangle.Rectangle object at 0x0000016D9E7B6E40>] was saved to a file.
+2026-05-28 12:02:39,213 | INFO | circle | Circle created successfully 
+2026-05-28 12:02:39,213 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,213 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>, <rectangle.Rectangle object at 0x0000016D9E7B6E40>, <circle.Circle object at 0x0000016D9E7B6F90>] was saved to a file.
+2026-05-28 12:02:39,213 | INFO | circle | Circle created successfully 
+2026-05-28 12:02:39,214 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,214 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>, <rectangle.Rectangle object at 0x0000016D9E7B6E40>, <circle.Circle object at 0x0000016D9E7B6F90>, <circle.Circle object at 0x0000016D9E72BB10>] was saved to a file.
+2026-05-28 12:02:39,214 | INFO | square | Square created successfully 
+2026-05-28 12:02:39,214 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,214 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>, <rectangle.Rectangle object at 0x0000016D9E7B6E40>, <circle.Circle object at 0x0000016D9E7B6F90>, <circle.Circle object at 0x0000016D9E72BB10>, <square.Square object at 0x0000016D9E72BD90>] was saved to a file.
+2026-05-28 12:02:39,214 | INFO | square | Square created successfully 
+2026-05-28 12:02:39,215 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,215 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>, <rectangle.Rectangle object at 0x0000016D9E7B6E40>, <circle.Circle object at 0x0000016D9E7B6F90>, <circle.Circle object at 0x0000016D9E72BB10>, <square.Square object at 0x0000016D9E72BD90>, <square.Square object at 0x0000016D9E7CE2C0>] was saved to a file.
+2026-05-28 12:02:39,215 | INFO | circle | Circle created successfully 
+2026-05-28 12:02:39,215 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:02:39,215 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>, <rectangle.Rectangle object at 0x0000016D9E7B6E40>, <circle.Circle object at 0x0000016D9E7B6F90>, <circle.Circle object at 0x0000016D9E72BB10>, <square.Square object at 0x0000016D9E72BD90>, <square.Square object at 0x0000016D9E7CE2C0>, <circle.Circle object at 0x0000016D9E72BC50>] was saved to a file.
+2026-05-28 12:02:39,215 | INFO | shape_manager | The list [<square.Square object at 0x0000016D9E7B6CF0>, <square.Square object at 0x0000016D9E72B890>, <rectangle.Rectangle object at 0x0000016D9E7B6E40>, <circle.Circle object at 0x0000016D9E7B6F90>, <circle.Circle object at 0x0000016D9E72BB10>, <square.Square object at 0x0000016D9E72BD90>, <square.Square object at 0x0000016D9E7CE2C0>, <circle.Circle object at 0x0000016D9E72BC50>] was loaded from the file
+2026-05-28 12:02:39,216 | INFO | shape_manager | Shape Manager created successfully
+2026-05-28 12:15:52,782 | INFO | root | The program started working.
+2026-05-28 12:15:52,782 | INFO | shape_manager | The file shapes.json is opened to read information.
+2026-05-28 12:15:52,782 | INFO | square | Square created successfully 
+2026-05-28 12:15:52,783 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,783 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>] was saved to a file.
+2026-05-28 12:15:52,783 | INFO | square | Square created successfully 
+2026-05-28 12:15:52,784 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,784 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>] was saved to a file.
+2026-05-28 12:15:52,784 | INFO | rectangle | Rectangle created successfully 
+2026-05-28 12:15:52,784 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,784 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>, <rectangle.Rectangle object at 0x0000020F76C66E40>] was saved to a file.
+2026-05-28 12:15:52,785 | INFO | circle | Circle created successfully 
+2026-05-28 12:15:52,785 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,785 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>, <rectangle.Rectangle object at 0x0000020F76C66E40>, <circle.Circle object at 0x0000020F76C66F90>] was saved to a file.
+2026-05-28 12:15:52,786 | INFO | circle | Circle created successfully 
+2026-05-28 12:15:52,786 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,786 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>, <rectangle.Rectangle object at 0x0000020F76C66E40>, <circle.Circle object at 0x0000020F76C66F90>, <circle.Circle object at 0x0000020F76BDBB10>] was saved to a file.
+2026-05-28 12:15:52,787 | INFO | square | Square created successfully 
+2026-05-28 12:15:52,787 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,787 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>, <rectangle.Rectangle object at 0x0000020F76C66E40>, <circle.Circle object at 0x0000020F76C66F90>, <circle.Circle object at 0x0000020F76BDBB10>, <square.Square object at 0x0000020F76BDBD90>] was saved to a file.
+2026-05-28 12:15:52,787 | INFO | square | Square created successfully 
+2026-05-28 12:15:52,787 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,788 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>, <rectangle.Rectangle object at 0x0000020F76C66E40>, <circle.Circle object at 0x0000020F76C66F90>, <circle.Circle object at 0x0000020F76BDBB10>, <square.Square object at 0x0000020F76BDBD90>, <square.Square object at 0x0000020F76C7E2C0>] was saved to a file.
+2026-05-28 12:15:52,788 | INFO | circle | Circle created successfully 
+2026-05-28 12:15:52,788 | INFO | shape_manager | The shapes.json file is opened for writing information.
+2026-05-28 12:15:52,788 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>, <rectangle.Rectangle object at 0x0000020F76C66E40>, <circle.Circle object at 0x0000020F76C66F90>, <circle.Circle object at 0x0000020F76BDBB10>, <square.Square object at 0x0000020F76BDBD90>, <square.Square object at 0x0000020F76C7E2C0>, <circle.Circle object at 0x0000020F76BDBC50>] was saved to a file.
+2026-05-28 12:15:52,788 | INFO | shape_manager | The list [<square.Square object at 0x0000020F76C66CF0>, <square.Square object at 0x0000020F76BDB890>, <rectangle.Rectangle object at 0x0000020F76C66E40>, <circle.Circle object at 0x0000020F76C66F90>, <circle.Circle object at 0x0000020F76BDBB10>, <square.Square object at 0x0000020F76BDBD90>, <square.Square object at 0x0000020F76C7E2C0>, <circle.Circle object at 0x0000020F76BDBC50>] was loaded from the file
+2026-05-28 12:15:52,788 | INFO | shape_manager | Shape Manager created successfully

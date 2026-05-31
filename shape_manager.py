@@ -39,7 +39,7 @@ class ShapeManager:
             self.save_to_json()
         
         except KeyError as e:
-            print("Missing required field")
+            print(f"{e}: Missing required field")
         
     
     def get_all_shapes(self):
@@ -106,7 +106,7 @@ class ShapeManager:
                 logger.info("The list %s was saved to a file." , self.shapes)
         
         except OSError as e:
-            print(f"Could not write to JSON file: {e}")
+            print(f"{e}: Could not write to JSON file: {e}")
             logger.warning("You do not have permission to access the file %s.", file.name)
     
     
@@ -145,14 +145,14 @@ class ShapeManager:
                 
                 for shape in shapes_data:
                     self.create_shape(shape)
-                logger.info("The list %s was loaded from the file" , self.shapes)
+                logger.info("The list shapes was loaded from the file" )
         
         except FileNotFoundError as e:
-            print("the json file not exist")
+            print(f"{e}: the json file not exist")
             logger.warning("the json file not exist")
             return []
         except json.JSONDecodeError as e:
-            print("There was a problem opening the file.")
+            print(f"{e}: There was a problem opening the file.")
             logger.warning("There was a problem opening the file.")
 
 if __name__ == "__main__":
